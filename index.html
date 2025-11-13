@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>災時排泄物處理：雙桶系統 | drydenwu</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-blue: #3498db; /* 代表小便桶 */
+            --accent-brown: #a0522d; /* 代表大號桶 */
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --warning-bg: #fff3cd;
+            --warning-text: #856404;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .intro {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        /* Material Grid */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .material-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .material-item strong {
+            display: block;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* Bucket System Comparison */
+        .bucket-system {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .bucket-card {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .bucket-pee {
+            border-top: 5px solid var(--accent-blue);
+        }
+        
+        .bucket-pee h3 { color: var(--accent-blue); }
+
+        .bucket-poo {
+            border-top: 5px solid var(--accent-brown);
+        }
+        
+        .bucket-poo h3 { color: var(--accent-brown); }
+
+        /* Alert Box */
+        .alert {
+            background-color: var(--warning-bg);
+            color: var(--warning-text);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border: 1px solid #ffeeba;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #888;
+            font-size: 0.8rem;
+            padding-bottom: 20px;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .print-btn {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 20px auto;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .print-btn:hover {
+            background-color: #34495e;
+        }
+
+        /* Printing Styles */
+        @media print {
+            body { background: white; color: black; }
+            .container { width: 100%; max-width: 100%; margin: 0; padding: 0; }
+            section, .intro { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+            .print-btn { display: none; }
+            a { text-decoration: underline; color: black; }
+            a[href]:after { content: " (" attr(href) ")"; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>災時排泄物處理：雙桶系統</h1>
+        <div class="meta">
+            <span>作者：drydenwu</span> | <span>日期：2025-06-01</span>
+        </div>
+    </header>
+
+    <button class="print-btn" onclick="window.print()">🖨️ 列印此指南</button>
+
+    <div class="intro">
+        <p><strong>雙桶系統 (Twin-Bucket System)</strong> 是 2011 年 2 月紐西蘭基督城地震後發展出來的方案。這個系統符合簡單、便宜且經實際驗證有效的標準。</p>
+        <p>核心關鍵是<strong>「分開尿液與糞便」</strong>（乾濕分離）。這麼做可以有效的減少體積和臭味，讓內容物更安全、更容易儲存和處理。</p>
+    </div>
+
+    <section>
+        <h2>🛠️ 準備材料</h2>
+        <div class="materials-grid">
+            <div class="material-item">
+                <strong>1. 塑膠桶 x 2</strong>
+                堅硬的 20 公升桶子，必須附有密封蓋。分別標示「小便」與「大號」。
+            </div>
+            <div class="material-item">
+                <strong>2. 馬桶座墊 x 2</strong>
+                可使用一般座墊或專用款。注意<b>不要選擇有吸水性的材質</b>，以免細菌滋生。
+            </div>
+            <div class="material-item">
+                <strong>3. 碳基材 (覆蓋用)</strong>
+                鋸木屑、咖啡豆殼（非咖啡渣）、碎紙機碎紙、椰磚、曬乾稻殼。不建議用米糠。
+            </div>
+            <div class="material-item">
+                <strong>4. 其他耗材</strong>
+                厚垃圾袋、衛生紙、消毒用品。
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🚽 如何使用與維護</h2>
+        <div class="alert">
+            <strong>⚠️ 重要原則：</strong> 依據需求選擇桶子。<b>儘量不要把尿液倒進大便桶中</b>，混合後容易產生惡臭且難以處理。
+        </div>
+
+        <div class="bucket-system">
+            <div class="bucket-card bucket-pee">
+                <h3>💧 小便桶 (液體)</h3>
+                <p><b>使用方式：</b></p>
+                <ul>
+                    <li>專門用於收集尿液。</li>
+                    <li>使用後<b>蓋上蓋子，確保緊密關閉</b>。</li>
+                </ul>
+                <p><b>處理方式：</b></p>
+                <ul>
+                    <li>尿量約是糞便的 10 倍，會較快裝滿。</li>
+                    <li>尿液相對乾淨，處理較容易。</li>
+                    <li>可倒入土壤中（深 15-20 公分）或堆肥堆。</li>
+                    <li>緊急時可倒入下水道或自然林地，避免污染水源。</li>
+                </ul>
+            </div>
+
+            <div class="bucket-card bucket-poo">
+                <h3>💩 大號桶 (固體)</h3>
+                <p><b>使用方式：</b></p>
+                <ul>
+                    <li>首次使用前，套入<b>厚垃圾袋</b>。</li>
+                    <li>使用後，撒入半杯<b>碳基材</b>，完全覆蓋表面（除臭防蠅）。</li>
+                    <li>衛生紙請丟入此桶。</li>
+                    <li>使用後蓋上蓋子，但<b>留一點縫隙通風乾燥</b>。</li>
+                </ul>
+                <p><b>處理方式：</b></p>
+                <ul>
+                    <li>裝滿約一半時即可處理。</li>
+                    <li>將垃圾袋綁緊防漏，存放在遠離食物與水源的安全處。</li>
+                    <li>糞便體積小，經通風乾燥後會自然分解。</li>
+                    <li><b>請勿</b>隨意挖洞埋葬垃圾袋。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🛡️ 衛生與安全注意</h2>
+        <ul>
+            <li><b>保持清潔：</b> 缺水時難以清潔表面，應避免直接碰觸糞便。</li>
+            <li><b>材質選擇：</b> 任何可能接觸糞便的表面（如馬桶座墊）應使用<b>無孔、不吸水</b>的材料，方便消毒。</li>
+            <li><b>存放位置：</b> 裝有排泄物的袋子應遠離兒童、寵物及老鼠。</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>資料來源：<br>
+        <a href="https://phlush.org/set-up-and-use-your-emergency-toilet/" target="_blank">PHLUSH - Set Up Your Emergency Toilet</a><br>
+        <a href="https://www.codsn.org/wp-content/uploads/2023/03/Emergency-Toilet-Guidebook.pdf" target="_blank">Emergency Toilet Guidebook (PDF)</a>
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
