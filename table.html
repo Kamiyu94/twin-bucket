@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>災時排泄物處理：雙桶系統 | drydenwu</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-blue: #3498db; /* 小便 */
+            --bg-blue: #ebf5fb;
+            --accent-brown: #a0522d; /* 大號 */
+            --bg-brown: #fbf3eb;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* 引用區塊：強調重要性 */
+        .intro-quote {
+            background: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-left: 6px solid #ffeeba;
+            margin-bottom: 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+        .intro-quote::before {
+            content: "⚠️";
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+
+        /* 表格樣式 */
+        .table-wrapper {
+            overflow-x: auto; /* 讓手機版可以橫向滑動 */
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px; /* 防止手機上擠成一團 */
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        /* 表頭樣式 */
+        thead th {
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+            border: none;
+        }
+
+        th.col-category { background: var(--primary-color); width: 15%; border-radius: 8px 0 0 0; }
+        th.col-pee { background: var(--accent-blue); width: 42.5%; }
+        th.col-poo { background: var(--accent-brown); width: 42.5%; border-radius: 0 8px 0 0; }
+
+        /* 內容欄位樣式 */
+        td.category {
+            font-weight: bold;
+            color: var(--primary-color);
+            background-color: #f9f9f9;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        /* 針對不同桶子的背景色微調 */
+        td.pee-cell { background-color: rgba(52, 152, 219, 0.03); }
+        td.poo-cell { background-color: rgba(160, 82, 45, 0.03); }
+
+        /* 強調文字 */
+        .highlight-blue { color: var(--accent-blue); font-weight: bold; }
+        .highlight-brown { color: var(--accent-brown); font-weight: bold; }
+
+        /* 準備材料區塊 */
+        .materials-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+        .materials-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        a { color: var(--accent-blue); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .print-btn {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 20px auto;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .print-btn:hover { background-color: #34495e; }
+
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .table-wrapper { box-shadow: none; padding: 0; }
+            table { min-width: 100%; }
+            th, td { border: 1px solid #000 !important; }
+            /* 列印時強制顯示背景色 (部分瀏覽器需要) */
+            th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>災時排泄物處理：雙桶系統</h1>
+        <div class="meta">
+            <span>原作者：<a href="https://www.threads.net/@drydenwu?hl=zh-tw" target="_blank" rel="noopener">drydenwu</a></span> | 
+            <span>日期：2025-06-01</span>
+        </div>
+    </header>
+
+    <button class="print-btn" onclick="window.print()">🖨️ 列印此對照表</button>
+
+    <div class="intro-quote">
+        糞便是災後傳染病的最大源頭，雙桶系統透過「乾濕分離」，能從源頭徹底阻斷病菌滋生與擴散。
+    </div>
+
+    <div class="materials-section">
+        <span class="materials-title">🛠️ 準備材料清单</span>
+        <ul>
+            <li><b>兩個 20 公升塑膠桶</b>（需附密封蓋，標示區分）。</li>
+            <li><b>兩個馬桶座墊</b>（選用無孔、不吸水材質，方便消毒）。</li>
+            <li><b>碳基材</b>（鋸木屑、咖啡豆殼、碎紙、椰磚、乾燥稻殼）。</li>
+            <li><b>耗材</b>：厚垃圾袋、衛生紙、清潔消毒用品。</li>
+        </ul>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-category">項目</th>
+                    <th class="col-pee">💧 小便桶 (尿液)</th>
+                    <th class="col-poo">💩 大號桶 (糞便)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category">關鍵原則</td>
+                    <td class="pee-cell">保持液態，<span class="highlight-blue">絕不混合糞便</span>。</td>
+                    <td class="poo-cell">保持乾燥，利用碳基材覆蓋。</td>
+                </tr>
+                <tr>
+                    <td class="category">使用前</td>
+                    <td class="pee-cell">確認桶子乾淨即可直接使用。</td>
+                    <td class="poo-cell">務必先套入<span class="highlight-brown">厚垃圾袋</span>。</td>
+                </tr>
+                <tr>
+                    <td class="category">使用後動作</td>
+                    <td class="pee-cell">蓋上蓋子，並確保<span class="highlight-blue">完全緊閉</span>（防漏）。</td>
+                    <td class="poo-cell">
+                        1. 撒入半杯碳基材，<span class="highlight-brown">完全覆蓋</span>排泄物。<br>
+                        2. 蓋上蓋子，但<b>保留一點縫隙</b>通風。
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category">衛生紙處理</td>
+                    <td class="pee-cell">不可丟入（會造成處理困難）。</td>
+                    <td class="poo-cell">直接丟入此桶。</td>
+                </tr>
+                <tr>
+                    <td class="category">滿桶頻率</td>
+                    <td class="pee-cell"><b>快</b>（量大，約糞便的 10 倍）。</td>
+                    <td class="poo-cell"><b>慢</b>（一般小家庭約數週才裝半滿）。</td>
+                </tr>
+                <tr>
+                    <td class="category">如何處理</td>
+                    <td class="pee-cell">
+                        倒入土壤（深 15-20cm）、堆肥堆。<br>
+                        <small>*尿液相對乾淨，緊急時可倒下水道。</small>
+                    </td>
+                    <td class="poo-cell">
+                        裝滿約一半時，將袋口綁死防漏。<br>
+                        存放於乾燥安全處自然分解。<br>
+                        <small>*嚴禁挖洞掩埋塑膠袋。</small>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="category">風險等級</td>
+                    <td class="pee-cell">低 (除生病外，尿液幾無細菌)</td>
+                    <td class="poo-cell"><span class="highlight-brown">極高</span> (主要致病源，需小心隔離)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>資料來源：<br>
+        <a href="https://phlush.org/set-up-and-use-your-emergency-toilet/" target="_blank" rel="noopener">PHLUSH - Set Up Your Emergency Toilet</a><br>
+        <a href="https://www.codsn.org/wp-content/uploads/2023/03/Emergency-Toilet-Guidebook.pdf" target="_blank" rel="noopener">Emergency Toilet Guidebook (PDF)</a>
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
